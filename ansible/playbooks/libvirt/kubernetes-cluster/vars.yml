@@ -1,0 +1,13 @@
+---
+libvirt_storage_pool_path: "{{ lookup('env','HOME') }}/libvirt-storage-pool-kubernetes-ansible"
+libvirt_storage_pool: 'kubernetes-ansible'
+libvirt_network: kubernetes-ansible
+libvirt_uri: 'qemu:///system'
+
+image:
+    url:    "{{ i_url | default('https://download.fedoraproject.org/pub/fedora/linux/releases/23/Cloud/x86_64/Images/Fedora-Cloud-Base-23-20151030.x86_64.qcow2', True) }}"
+    name:   "{{ i_name| default('Fedora-Cloud-Base-22-20150521.x86_64.qcow2', True) }}"
+    sha256: "{{ i_sha256 | default('a5d6da626667e21f7de04202c8da5396c0fc7e26872d016f3065f1110cff7962', True) }}"
+    compression: ""
+ssh_user: kube
+sudo: yes

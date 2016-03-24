@@ -1,0 +1,9 @@
+# install flannel
+---
+- name: Configure flannel
+  hosts: masters:nodes
+  sudo: yes
+  roles:
+    - { role: flannel, when: networking == 'flannel' }
+  tags:
+    - network-service-install

@@ -1,0 +1,9 @@
+# launch addons, like dns
+- name: Configure kubernetes addon
+  hosts: masters
+  sudo: yes
+  roles:
+    - kubernetes-addons
+  tags:
+    - addons
+    - dns

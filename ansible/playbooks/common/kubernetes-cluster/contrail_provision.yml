@@ -1,0 +1,8 @@
+# provision opencontrail once the services are operational
+- name: Configure contrail_provision
+  hosts: masters:nodes
+  sudo: yes
+  roles:
+    - { role: opencontrail-provision, when: networking == 'opencontrail' }
+  tags:
+    - network-service-config

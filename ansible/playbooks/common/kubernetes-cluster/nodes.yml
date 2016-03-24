@@ -1,0 +1,9 @@
+---
+# install kubernetes on the nodes
+- name: Configure nodes
+  hosts: nodes
+  sudo: yes
+  roles:
+    - node
+  tags:
+    - nodes

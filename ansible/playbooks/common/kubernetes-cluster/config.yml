@@ -1,0 +1,15 @@
+---
+- include: evaluate_groups.yml
+- hosts: masters:nodes:etcd
+  tasks:
+  - debug: var=groups verbosity=4
+
+- include: pre-ansible.yml
+- include: etcd.yml
+#- include: docker.yml
+#- include: flannel.yml
+#- include: opencontrail.yml
+#- include: master.yml
+#- include: addon.yml
+#- include: nodes.yml
+#- include: contrail_provision.yml

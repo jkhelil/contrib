@@ -1,0 +1,9 @@
+---
+# install opencontrail
+- name: Configure opencontrail
+  hosts: masters:nodes
+  sudo: yes
+  roles:
+    - { role: opencontrail, when: networking == 'opencontrail'}
+  tags:
+    - network-service-install

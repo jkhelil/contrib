@@ -1,0 +1,9 @@
+---
+- name: pre-ansible
+  hosts: masters:nodes
+  gather_facts: false
+  sudo: yes
+  roles:
+    - pre-ansible
+  tags:
+    - pre-ansible

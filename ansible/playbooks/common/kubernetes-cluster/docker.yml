@@ -1,0 +1,9 @@
+---
+- name: Configure common docker
+  hosts: masters:nodes
+  sudo: yes
+  roles:
+    - common
+    - docker
+  tags:
+    - docker
